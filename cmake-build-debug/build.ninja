@@ -56,6 +56,13 @@ build CMakeFiles/renderer.dir/src/main.c.o: C_COMPILER__renderer_Debug /Users/mi
   OBJECT_DIR = CMakeFiles/renderer.dir
   OBJECT_FILE_DIR = CMakeFiles/renderer.dir/src
 
+build CMakeFiles/renderer.dir/src/display.c.o: C_COMPILER__renderer_Debug /Users/mike/3d-renderer/src/display.c || cmake_object_order_depends_target_renderer
+  DEP_FILE = CMakeFiles/renderer.dir/src/display.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -std=gnu99
+  INCLUDES = -I/opt/homebrew/include/SDL2
+  OBJECT_DIR = CMakeFiles/renderer.dir
+  OBJECT_FILE_DIR = CMakeFiles/renderer.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target renderer
@@ -64,7 +71,7 @@ build CMakeFiles/renderer.dir/src/main.c.o: C_COMPILER__renderer_Debug /Users/mi
 #############################################
 # Link the executable renderer
 
-build renderer: C_EXECUTABLE_LINKER__renderer_Debug CMakeFiles/renderer.dir/src/main.c.o
+build renderer: C_EXECUTABLE_LINKER__renderer_Debug CMakeFiles/renderer.dir/src/main.c.o CMakeFiles/renderer.dir/src/display.c.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  -lSDL2
   LINK_PATH = -L/opt/homebrew/lib

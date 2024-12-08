@@ -8,6 +8,6 @@ set(CMAKE_OSX_ARCHITECTURES "arm64")
 include_directories(/opt/homebrew/include/SDL2)
 link_directories(/opt/homebrew/lib)
 
-add_executable(renderer ./src/main.c)
+add_executable(renderer ./src/main.c src/display.h src/display.h src/display.c)
 
 target_link_libraries(renderer SDL2)
