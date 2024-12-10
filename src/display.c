@@ -88,6 +88,20 @@ void draw_rect(int x, int y, int width, int height, uint32_t color) {
     }
 }
 
+void draw_pixel(int x, int y, uint32_t color) {
+    if (x < window_width && y < window_height) {
+        color_buffer[(window_width * y) + x] = color;
+    }
+}
+
+void draw_dots(uint32_t color, int space) {
+    for (int y = 0; y < window_height; y += space) {
+        for (int x = 0; x < window_width; x += space) {
+            draw_pixel(x, y, color);
+        }
+    }
+}
+
 void destroy_window(void) {
     free(color_buffer);
     SDL_DestroyRenderer(renderer);

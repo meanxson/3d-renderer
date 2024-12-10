@@ -26,4 +26,7 @@ void draw_grid(uint32_t color, int space);
 
 void draw_rect(int x, int y, int width, int height, uint32_t color);
 
+void draw_pixel(int x, int y, uint32_t color);
+void draw_dots(uint32_t color, int space);
+
 #endif //INC_3D_RENDERER_DISPLAY_H
